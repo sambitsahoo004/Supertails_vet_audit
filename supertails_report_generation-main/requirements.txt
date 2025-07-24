@@ -1,0 +1,31 @@
+# Core dependencies - Essential only
+anthropic==0.52.0
+openai==1.35.0
+boto3==1.34.0
+python-dotenv==1.0.0
+
+# HTTP client for OpenAI
+httpx==0.27.0
+
+# Qdrant and vector search
+qdrant-client==1.14.2
+
+# Retry and async handling
+tenacity==8.2.3
+
+# Additional utilities
+requests==2.31.0
+urllib3==2.0.7
+
+# Excel processing - Lighter alternative
+xlsxwriter==3.1.9
+
+# Explicit numpy dependency to avoid source directory issues
+numpy==1.24.3
+
+# PDF processing dependencies (for optimized document_chunker.py)
+# PyMuPDF is recommended for large PDF files (best performance)
+PyMuPDF==1.23.8
+# Alternative PDF processors (fallbacks)
+PyPDF2==3.0.1
+pdfplumber==0.10.3 
