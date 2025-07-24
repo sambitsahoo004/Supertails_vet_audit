@@ -1,0 +1,5 @@
+# This file is used to specify the dependencies for the project.
+boto3==1.28.85
+google-cloud-storage==2.10.0
+google-auth==2.23.4
+python-dotenv==1.1.0
