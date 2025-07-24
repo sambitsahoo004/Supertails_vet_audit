@@ -1,0 +1,69 @@
+# Docker-optimized requirements file for Python 3.10 compatibility
+# Dependencies are installed in specific order in Dockerfile for optimal caching
+
+# Build dependencies (compatible with Python 3.10)
+Cython==3.0.10
+setuptools==68.0.0
+wheel>=0.41.0
+pybind11>=2.10.0
+packaging
+ninja
+
+# Core AWS and API dependencies
+boto3>=1.26.0
+botocore>=1.29.0
+python-dotenv>=1.0.0
+openai>=1.0.0
+anthropic>=0.7.0
+requests>=2.32.0
+wget>=3.2.0
+
+# Scientific computing (compatible versions)
+numpy==1.24.3
+scipy>=1.11.0
+
+# PyTorch (CPU optimized for Lambda with Python 3.10)
+torch==2.1.0+cpu --index-url https://download.pytorch.org/whl/cpu
+torchaudio==2.1.0+cpu --index-url https://download.pytorch.org/whl/cpu
+
+# Audio processing
+librosa==0.10.1
+soundfile==0.12.1
+pydub==0.25.1
+
+# ML/NLP (updated versions)
+transformers==4.35.0
+huggingface_hub>=0.17.0,<0.25.0
+onnx==1.15.0
+onnxruntime==1.16.0
+
+# PyTorch Lightning and Hydra
+pytorch-lightning==2.1.0
+hydra-core==1.3.2
+omegaconf==2.3.0
+
+# NeMo dependencies (manually installed to avoid build issues)
+ruamel.yaml
+text-unidecode
+webdataset
+braceexpand
+editdistance
+marshmallow
+tensorboard
+wandb
+matplotlib
+pandas
+inflect
+unidecode
+frozendict
+wrapt
+sacrebleu
+sacremoses
+jiwer
+
+# NeMo toolkit (with fallback versions)
+nemo-toolkit[asr]==1.22.0
+
+# Additional ML libraries
+scikit-learn>=1.3.0
+tenacity>=8.2.3

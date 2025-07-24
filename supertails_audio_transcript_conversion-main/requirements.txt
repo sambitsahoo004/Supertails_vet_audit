@@ -1,0 +1,79 @@
+# Build dependencies (compatible with Python 3.10)
+Cython==3.0.10
+setuptools==68.0.0
+wheel>=0.41.0
+pybind11>=2.10.0
+packaging
+ninja
+
+# Core dependencies for Lambda function
+boto3>=1.26.0
+botocore>=1.29.0
+
+# Audio processing dependencies (Windows-compatible)
+# Note: Install PyTorch separately for your platform:
+# pip install torch==2.1.0+cpu torchaudio==2.1.0+cpu --index-url https://download.pytorch.org/whl/cpu
+librosa==0.10.1
+soundfile==0.12.1
+pydub==0.25.1
+numpy==1.24.3
+scipy>=1.11.0
+
+# ML/NLP packages
+transformers==4.35.0
+huggingface_hub>=0.17.0,<0.25.0
+onnx==1.15.0
+onnxruntime==1.16.0
+
+# PyTorch Lightning and Hydra
+pytorch-lightning==2.1.0
+hydra-core==1.3.2
+omegaconf==2.3.0
+
+# OpenAI and Anthropic API clients
+openai>=1.0.0
+anthropic>=0.7.0
+
+# Environment and utility dependencies
+python-dotenv>=1.0.0
+requests>=2.32.0
+wget>=3.2.0
+tenacity>=8.2.3
+
+# Additional ML dependencies
+scikit-learn>=1.3.0
+
+# NeMo dependencies (install manually to avoid build issues)
+ruamel.yaml
+text-unidecode
+webdataset
+braceexpand
+editdistance
+marshmallow
+tensorboard
+wandb
+matplotlib
+pandas
+inflect
+unidecode
+frozendict
+wrapt
+sacrebleu
+sacremoses
+jiwer
+
+# NeMo toolkit - install with: pip install nemo-toolkit[asr]==1.22.0
+# Note: May need --no-deps flag on some systems to avoid conflicts
+nemo-toolkit[asr]==1.22.0
+
+# FFmpeg Python wrapper (for local development)
+ffmpeg-python==0.2.0
+
+# File processing utilities
+glob2==0.7
+
+# Monitoring and logging
+torchmetrics>=1.2.0
+
+# Data processing utilities (versions matching Dockerfile)
+# These are installed as NeMo dependencies but listed for completeness
