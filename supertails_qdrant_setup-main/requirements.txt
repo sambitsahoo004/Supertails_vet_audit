@@ -1,0 +1,17 @@
+# MINIMAL requirements.txt for Lambda layer
+# Keep only essential packages to stay under 70MB limit
+
+httpx==0.26.0
+tenacity==9.0.0
+python-dotenv==1.1.0
+
+# REMOVED to reduce size:
+# openai==1.30.1          # Heavy package - use httpx for API calls instead
+# requests==2.31.0        # Redundant - httpx handles HTTP requests
+# pymupdf==1.26.0         # Very large (~30MB) - consider alternatives
+# qdrant-client==1.14.2   # Large package - using custom qdrant_simple.py instead
+# boto3==1.28.85          # Usually pre-installed in Lambda runtime
+# pydantic==2.5.0         # Not used in your code
+
+# Standard library modules (no installation needed):
+# - json, os, logging, time, typing, base64, io, sys, dataclasses
